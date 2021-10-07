@@ -21,7 +21,40 @@
 <body>
 
     <h2>Yadavally Sai Vikram Reddy orders a car</h2>
+    <div class="container border bg-info" style="color:black">
+        <form>
+            <input type="checkbox" id="check_electric" name="check_electric" value="electric">
+            <label for="check_electric" class="">electric </label><br>
 
+            <input type="checkbox" id="check_ac" name="check_ac" value="ac">
+            <label for="check_ac">ac </label><br>
+
+            <input type="checkbox" id="check_gps" name="check_gps" value="gps">
+            <label for="check_gps">gps </label><br>
+
+            <input type="button" class="col-sm-3 btn-primary" onclick="orderCar()" value="Order a Car">
+            <br>
+        </form>
+    </div>
+
+    <div class="container border bg-primary">
+        <form>
+            <div class="form-group row">
+                <label for="form_property" class="col-sm-2 col-form-label">Enter a property</label>
+                <input type="text" class="col-sm-4 form-control" id="form_property" name="form_property"
+                    value="color"><br>
+            </div>
+            <div class="form-group row">
+                <label for="form_value" class="col-sm-2 col-form-label">Enter a value</label>
+                <input type="text" class="col-sm-4 form-control" id="form_value" name="form_value"><br>
+            </div>
+            <input type="button" class="col-sm-3 btn-primary" onclick="updateCar()" value="Update the Car">
+        </form>
+    </div>
+
+    <div class="container border bg-secondary">
+        <p id="result3">This text will be replaced </p>
+    </div>
 
     <script>
         var my_car = {}
