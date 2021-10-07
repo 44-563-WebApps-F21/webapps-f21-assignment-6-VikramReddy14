@@ -43,9 +43,16 @@
                 alert("Access denied")
                 wrong = wrong + 1
                 out.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
+                if (cntNew >= 3) {
+                    if (wrong >= 3) {
+                        incorrectPassphrase()
+                    }
+                }
             }
         }
-
+            function incorrectPassphrase() {
+                alert("account locked")
+            }
 
         let usingImage = 1;
             function newImage() {
