@@ -22,6 +22,9 @@
     <div class="container border">
         <p id="result">This text will be replaced </p>
     </div>
+    <div class="container">
+        <img src="./images/antelope.jpg" alt="antelope" id="image" height="200" width="200" onclick="newImage()">
+    </div>
 
     <script>
         let correct = 0;
@@ -30,7 +33,6 @@
             console.log("Getting form values")
             age = document.getElementById("form1_age").value
             nick = document.getElementById("form1_nick").value
-            // confirmed = confirm("Are these the values? "+age+" and "+nick)
 
             out = document.getElementById("result")
             if (age == nick) {
@@ -43,6 +45,29 @@
                 out.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
             }
         }
+
+
+        let usingImage = 1;
+            function newImage() {
+                image = document.getElementById("image")
+                switch (usingImage) {
+                    case 1:
+                        image.src = "./images/antelope.jpg"
+                        usingImage = usingImage + 1
+                        break
+                    case 2:
+                        image.src = "./Images/dolphin.jpg"
+                        usingImage = usingImage + 1
+                        break
+                    case 3:
+                        image.src = "Images/yak.jpg"
+                        usingImage = usingImage + 1
+                        break
+                    default:
+                        break
+                }
+            }
+
     </script>
 
 </body>
