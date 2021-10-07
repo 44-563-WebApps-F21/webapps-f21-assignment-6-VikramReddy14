@@ -37,13 +37,15 @@
             out = document.getElementById("result")
             if (age == nick) {
                 alert("Access allowed")
+                count = 0
                 correct = correct + 1
                 out.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
             } else {
                 alert("Access denied")
+                count = count +1
                 wrong = wrong + 1
                 out.innerHTML = "correct: " + correct + " " + "wrong: " + wrong
-                if (cntNew >= 3) {
+                if (count>= 3) {
                     if (wrong >= 3) {
                         incorrectPassphrase()
                     }
